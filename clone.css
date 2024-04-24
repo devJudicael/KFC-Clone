@@ -56,8 +56,8 @@ li img  {
 }
 
 .bgmenu {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: none;
 }
 
@@ -179,11 +179,43 @@ li img  {
 
 @media screen and (max-width:550px) {
     .navlinks {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        background-color: #e8344cdd;
+        z-index: 2;
+        transition: margin-top .4s ease ;
+       
+        margin-top: -300%;
+        /* visibility: hidden; */
+
+    }
+
+
+    
+
+    .menu {
+        margin-top: 0;
+        /* visibility: visible; */
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+    }
+
+    .navlinks ul li {
+        margin: 7px 0;
     }
 
     .bgmenu {
         display: block;
+        z-index: 3;
     }
 
     .heading > p {
@@ -749,7 +781,7 @@ main {
 }
 
 .send button {
-    padding: 0 35px;
+    padding: 0 5px;
     border: 0;
     
     background-color: #e8344b;
@@ -931,7 +963,7 @@ main {
 }
 
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:550px) {
     .social {
         flex-direction: column;
     }
